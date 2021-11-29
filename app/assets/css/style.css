@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #03124a;
+}
+
+.header {
+  height: 4rem;
+  padding: 0.5rem;
+  background-color: #03124a;
+}
+.header-content {
+  display: flex;
+  width: 96%;
+  height: 3rem;
+  padding: 0 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titlePage {
+  padding: 0.4rem;
+  background-color: #eee;
+  color: #033397;
+  border: thin solid #e90023;
+  border-radius: 1.5rem/1.2rem;
+  font: 700 115% verdana;
+}
+
+.logo img {
+  width: auto;
+  height: 3rem;
+}
+
+.navBar {
+  background-color: #e90023;
+}
+
+.menu,
+.subMenu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  width: max-content;
+  padding-left: 5%;
+  justify-content: space-between;
+  text-align: center;
+}
+.menu > li {
+  position: relative;
+  margin: 0.5rem 0.5rem;
+  padding: 0 0.4rem;
+  border-left: 2px solid #75151b;
+  border-right: 2px solid #75151b;
+  font: 600 110% helvetica;
+  text-transform: uppercase;
+}
+
+.subMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  width: 100%;
+  background-color: #e90023;
+  border-radius: 0 0 0.5rem 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.subMenu > li {
+  margin: 0.5rem 0.8rem;
+}
+li:hover .subMenu {
+  display: flex;
+}
+.subMenu li:first-child {
+  padding-top: 0.5rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  height: calc(100vh - 7rem);
+  grid-template-areas: "score content";
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: repeat(auto-fit);
+}
+
+.score {
+  grid-area: score;
+  width: 95%;
+  height: 90%;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  grid-area: content;
+  background-color: #ddd;
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  border: thick solid #269bd8;
+  border-radius: 1.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.practiceCard {
+  border: 1px solid #000;
+  width: 250px;
+  height: auto;
+  padding: 1rem;
+  border: medium dashed #033397;
+  border-radius: 2rem;
+  text-align: center;
+}
+.practiceCard img {
+  width: 170px;
+  height: 170px;
+}
+.practiceCard figcaption {
+  font-family: Oxygen;
+}
