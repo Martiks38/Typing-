@@ -8,7 +8,7 @@ export function Header(){
    <section class="logo">
     <img src="app/assets/images/favicon.png" alt="logo">
    </section>
-   <section class="titlePage"><i>TypingSo</i></section>
+   <section class="titlePage"><span>TypingSo</span></section>
   </article>
  `;
 

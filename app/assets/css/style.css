@@ -94,7 +94,7 @@ a {
   text-decoration: none;
 }
 
-main {
+.home {
   display: grid;
   height: calc(100vh - 7rem);
   grid-template-areas: "score content";

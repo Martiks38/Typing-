@@ -15,7 +15,7 @@ export function Menu(){
   let $li = document.createElement("li");
   
   if(!item[1]){
-   $li.innerHTML = `<a href="#">${item[0]}</a>`;
+   $li.innerHTML = `<a href="#/${item[0]}">${item[0]}</a>`;
   }else{
    let $subUl = document.createElement("ul");
    $subUl.classList.add("subMenu");
@@ -23,7 +23,7 @@ export function Menu(){
    $li.innerHTML = `<span>${item[0]}</span>`;
    
    item[1].forEach(subItem => {
-    $subUl.innerHTML += `<li><a href="#">${subItem}</a></li>`;
+    $subUl.innerHTML += `<li><a href="#/${item[0]}/${subItem}">${subItem}</a></li>`;
    });
    $li.appendChild($subUl);
   }

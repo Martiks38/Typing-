@@ -1,0 +1,51 @@
+{
+ "0" : {
+  "Tiempo": "01:52",
+  "Pulsaciones": 533,
+  "p.p.m": 267,
+  "w.p.m": 46,
+  "Errores": "5% (31)"
+ },
+  "1" : {
+  "Tiempo": "01:47",
+  "Pulsaciones": 510,
+  "p.p.m": 266,
+  "w.p.m": 46,
+  "Errores": "6% (31)"
+ },
+  "2" : {
+  "Tiempo": "02:19",
+  "Pulsaciones": 632,
+  "p.p.m": 257,
+  "w.p.m": 43,
+  "Errores": "5% (32)"
+ },
+  "3" : {
+  "Tiempo": "01:59",
+  "Pulsaciones": 508,
+  "p.p.m": 233,
+  "w.p.m": 40,
+  "Errores": "8% (41)"
+ },
+  "4" : {
+  "Tiempo": "01:52",
+  "Pulsaciones": 533,
+  "p.p.m": 267,
+  "w.p.m": 46,
+  "Errores": "5% (31)"
+ },
+  "5" : {
+  "Tiempo": "01:47",
+  "Pulsaciones": 510,
+  "p.p.m": 266,
+  "w.p.m": 46,
+  "Errores": "6% (31)"
+ },
+  "6" : {
+  "Tiempo": "02:19",
+  "Pulsaciones": 632,
+  "p.p.m": 257,
+  "w.p.m": 43,
+  "Errores": "5% (32)"
+ }
+}
