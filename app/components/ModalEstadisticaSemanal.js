@@ -1,54 +1,44 @@
-import DATA from "../helpers/data.js";
+import data from "../helpers/data.js";
+import { showScore } from "../helpers/showScore.js";
 
 export function EstadisticaSemanal(){
- const $aside = document.createElement("aside"),
-  { URL } = DATA;
+  const { SCORE } = data;
 
- $aside.classList.add("modal", "modal__semanal");
+  const $aside = document.createElement("aside"),
+    $button = document.createElement("input");
 
- fetch(URL)
-  .then(async response => {
-   return response.ok 
-    ? await response.json()
-    : {status: response.status, statusText: response.statusText};
-  })
-  .then(json => {
-    const $button = document.createElement("input");
-    
-    $button.type = "button";
-    $button.value = "X";
-    $button.classList.add("exit");
-
-    Object.entries(json).forEach(score => {
-      const $section = document.createElement("section"),
-        $table = document.createElement("table"),
-        $tbody = document.createElement("tbody"),
-        $tr = document.createElement("tr");
+  $aside.classList.add("modal");
   
-      $section.classList.add("scoreCard");
-      Object.entries(score[1]).forEach(scoreData => {
-        $tr.innerHTML = `<td>${scoreData[0]}</td><td>${scoreData[1]}</td>`;
-        
-        let $clone = document.importNode($tr, true);
-        
-        $tbody.appendChild($clone);
-      });
-
-      $table.appendChild($tbody);
-      $section.appendChild($table);
-      $aside.appendChild($button);
-      $aside.appendChild($section);
-      
-      $button.addEventListener("click", e => {
-        if(!(e.target === $button)) return false;
-        
-        location.hash = "#/";
-      });
-    });
-  })
-  .catch(error => {
-   console.log(error)
+  $button.classList.add("exit");
+  $button.type = "button";
+  $button.value = "X";
+  
+  $button.addEventListener("click", e => {
+    if(!(e.target === $button)) return false;
+    
+    location.hash = "#/";
   });
+  
+  $aside.appendChild($button);
+    
+  fetch(SCORE)
+    .then(async response => {
 
- return $aside;
+      if(!response.ok) 
+        throw {"Error:": 404, "TextContent:": "No se ha hallado el archivo con la información requerida"};
+      
+      return await response.json();
+    })
+    .then(json => {
+      Object.entries(json).forEach(score => {
+        $aside.appendChild(showScore(score[1]));
+      });
+
+    })
+    .catch(error => {
+      $aside.appendChild(showScore(error));
+      console.error(error, `Error ${error.status}: ${error.statusText}`);
+    });
+ 
+  return $aside;
 }
