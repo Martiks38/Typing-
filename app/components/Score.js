@@ -2,14 +2,18 @@ import data from "../helpers/data.js";
 
 export function  Score(){
  const $score = document.createElement("aside"),
+  $scoreContent = document.createElement("article"),
   $h3 = document.createElement("h3");
 
  const { server } = data;
 
  $score.classList.add("score");
- $h3.innerHTML = `PUNTAJES`;
 
- $score.appendChild($h3);
+ $h3.innerHTML = `PUNTAJES`;
+   
+ $scoreContent.classList.add("score__content");
+ $scoreContent.appendChild($h3);
+ $score.appendChild($scoreContent);
 
  fetch(server)
   .then( async response => {
@@ -26,7 +30,7 @@ export function  Score(){
     const $p = document.createElement("p");
 
     $p.textContent = "No hay estadísticas previas";
-    $score.appendChild($p);
+    $scoreContent.appendChild($p);
 
     return $score;
    }
@@ -39,8 +43,8 @@ export function  Score(){
 
    $section.classList.add("scoreCard");
 
-   maximo === 3 ? $score.classList.add("score__show") : $score.classList.remove("score__show");
-
+   maximo === 3 ? $scoreContent.classList.add("score__show") : $scoreContent.classList.remove("score__show");
+  
    for(let ind = 0; ind < maximo; ind++){
     $tbody.innerHTML = `
      <tr>
@@ -55,12 +59,12 @@ export function  Score(){
      $section.appendChild($table);
 
      let $clone = document.importNode($section, true);
-     $score.appendChild($clone);
+     $scoreContent.appendChild($clone);
     }
   })
   .catch(error => {
    console.warn(`Error ${error.status}: ${error.statusText}`);
   });
-
- return $score;
+  
+  return $score;
 }

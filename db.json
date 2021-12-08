@@ -7,61 +7,55 @@
     "id": 1,
     "scores": [
       {
-        "tiempo": "00:01",
-        "pulsasiones": 10,
-        "ppm": 556,
-        "wpm": 111,
-        "errores": "0 (0%)"
+        "tiempo": "00:40",
+        "pulsasiones": 252,
+        "ppm": 369,
+        "wpm": 58,
+        "errores": "6 (2%)"
       },
       {
-        "tiempo": "00:01",
-        "pulsasiones": 10,
-        "ppm": 531,
-        "wpm": 106,
-        "errores": "0 (0%)"
-      },
-      {
-        "tiempo": "00:01",
-        "pulsasiones": 10,
-        "ppm": 514,
-        "wpm": 102,
-        "errores": "0 (0%)"
-      },
-      {
-        "tiempo": "00:01",
-        "pulsasiones": 10,
-        "ppm": 435,
-        "wpm": 87,
-        "errores": "0 (0%)"
-      },
-      {
-        "tiempo": "00:02",
-        "pulsasiones": 13,
-        "ppm": 308,
-        "wpm": 47,
-        "errores": "1 (10%)"
-      },
-      {
-        "tiempo": "00:02",
-        "pulsasiones": 11,
-        "ppm": 275,
+        "tiempo": "01:05",
+        "pulsasiones": 361,
+        "ppm": 331,
         "wpm": 50,
-        "errores": "0 (0%)"
+        "errores": "5 (1%)"
+      },
+      {
+        "tiempo": "00:51",
+        "pulsasiones": 278,
+        "ppm": 322,
+        "wpm": 54,
+        "errores": "8 (3%)"
+      },
+      {
+        "tiempo": "01:12",
+        "pulsasiones": 377,
+        "ppm": 310,
+        "wpm": 45,
+        "errores": "14 (4%)"
+      },
+      {
+        "tiempo": "01:08",
+        "pulsasiones": 353,
+        "ppm": 309,
+        "wpm": 43,
+        "errores": "13 (4%)"
+      },
+      {
+        "tiempo": "01:09",
+        "pulsasiones": 352,
+        "ppm": 305,
+        "wpm": 51,
+        "errores": "5 (1%)"
+      },
+      {
+        "tiempo": "01:01",
+        "pulsasiones": 313,
+        "ppm": 304,
+        "wpm": 45,
+        "errores": "13 (5%)"
       }
     ],
-    "scoresDay": [{
-        "tiempo": "00:02",
-        "pulsasiones": 13,
-        "ppm": 308,
-        "wpm": 47,
-        "errores": "1 (10%)"
-      },
-      {
-        "tiempo": "00:02",
-        "pulsasiones": 11,
-        "ppm": 275,
-        "wpm": 50,
-        "errores": "0 (0%)"
-      }]
+    "scoresDay": []
   }
 }

@@ -13,7 +13,7 @@ export async function results(resultado){
     return await resolve.json();
   })
  .then(async json => {
-    let datos = json.scores;
+    let datos = json.scoresDay;
     datos.push({
       "tiempo": resultado.tiempo,
       "pulsasiones": resultado.pulsaciones,
@@ -52,7 +52,7 @@ export async function results(resultado){
       .catch(console.error("No se ha podido subir los datos de la partida."));
    }else{
     orden = datos.sort((scoreA, scoreB) => scoreB.ppm - scoreA.ppm);
-
+    
     options = {
         method: "PUT",
         headers: {"content-type": "application/json; charset=utf-8"},

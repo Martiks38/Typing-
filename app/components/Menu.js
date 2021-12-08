@@ -15,7 +15,7 @@ export function Menu(){
   let $li = document.createElement("li");
   
   if(!item[1]){
-   $li.innerHTML = `<a href="#/${item[0]}">${item[0]}</a>`;
+   $li.innerHTML = `<a href="${item[0]  == "Inicio" ? "#/" : `#/${item[0]}`}">${item[0]}</a>`;
   }else{
    let $subUl = document.createElement("ul");
    $subUl.classList.add("subMenu");

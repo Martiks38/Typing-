@@ -14,8 +14,8 @@ export function searchText(){
  })
  .then(json => {
   let texts = Object.values(json),
-    // index = Math.floor(20 * Math.random());
-    index = Math.floor(Math.random());
+    index = Math.floor(20 * Math.random());
+    // index = Math.floor(Math.random());
 
   $p.innerHTML = highlightWord(texts[index]);
  })

@@ -42,23 +42,13 @@ export function DisplayInput($writingPad){
     if(pulsaciones === 0){
       start = new Date().getTime();
       pulsaciones++;
+      
+      $soni.src = "/app/assets/images/sonic-running.gif"
     }else{
       pulsaciones++;
     }
     
     let ppm = pulsaciones / ( timeNow - start );
-
-    if(ppm > 0.0084){
-      $soni.src = "/app/assets/images/omg.gif"
-    }
-    if(ppm > 0.005){
-      $soni.src = "/app/assets/images/sonic-running.gif"
-    }
-    if(ppm > 0.001667){
-      $soni.src = "/app/assets/images/caminando.gif"
-    }else{
-      $soni.src = "/app/assets/images/waiting-slow.gif";
-    }
 
     $ppm.textContent = `${Math.floor(ppm / 1.667e-5)}`;
 
@@ -70,6 +60,18 @@ export function DisplayInput($writingPad){
       
       $soni.style.transform = `translate(${x}px, -50%)`;
       
+      if(ppm > 0.0084){
+        $soni.src = "/app/assets/images/omg.gif"
+      }
+      if(ppm > 0.005){
+        $soni.src = "/app/assets/images/sonic-running.gif"
+      }
+      if(ppm > 0.001667){
+        $soni.src = "/app/assets/images/caminando.gif"
+      }else{
+        $soni.src = "/app/assets/images/waiting-slow.gif";
+      }
+
       indexWord++;
       offsetWord = newOffset;
       
@@ -91,8 +93,9 @@ export function DisplayInput($writingPad){
     }
     
     if(indexWord === text.split(" ").length && highlightedWord === $display.value) {
+      sessionStorage.setItem("time", timeNow - start)
       let resultado = {
-        tiempo: ("0" + Math.floor((timeNow - start) / 60000)).slice(-2) + ":" + ("0" + Math.floor(((timeNow - start) % 6000) / 1000)).slice(-2),
+        tiempo: ("0" + Math.floor((timeNow - start) / 60000)).slice(-2) + ":" + ("0" + Math.floor(((timeNow - start) % 60000) / 1000)).slice(-2),
         pulsaciones: pulsaciones,
         ppm: Math.floor(ppm / 1.667e-5),
         wpm: Math.floor(text.split(" ").length / ((timeNow - start) * 1.667e-5)),
