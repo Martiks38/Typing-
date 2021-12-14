@@ -43,7 +43,7 @@ export function DisplayInput($writingPad){
       start = new Date().getTime();
       pulsaciones++;
       
-      $soni.src = "/app/assets/images/sonic-running.gif"
+      $soni.src = "/app/assets/images/running.gif"
     }else{
       pulsaciones++;
     }
@@ -64,7 +64,7 @@ export function DisplayInput($writingPad){
         $soni.src = "/app/assets/images/omg.gif"
       }
       if(ppm > 0.005){
-        $soni.src = "/app/assets/images/sonic-running.gif"
+        $soni.src = "/app/assets/images/running.gif"
       }
       if(ppm > 0.001667){
         $soni.src = "/app/assets/images/caminando.gif"

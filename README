@@ -1,0 +1,7 @@
+Este proyecto consiste en una práctica de SPA.
+La temática se la práctica de mecanografía.
+Para simular las peticiones y subida de datos utilice JSON-Server
+
+Issues
+No reinicia las estadísticas al inicio de una nueva semana.
+No muestra errores en el display de escritura por parte de signos de puntuación.
